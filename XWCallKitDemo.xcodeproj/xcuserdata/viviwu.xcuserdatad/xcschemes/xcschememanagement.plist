@@ -6,8 +6,15 @@
 	<dict>
 		<key>XWCallKitDemo.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>XWCallKitIntentExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +30,21 @@
 			<true/>
 		</dict>
 		<key>0DC611FA1DA6959F00972DF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0DE8AF7F1DC1D673002CA158</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0DE8AF891DC1D674002CA158</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0DE8AFA61DC1D7EF002CA158</key>
 		<dict>
 			<key>primary</key>
 			<true/>

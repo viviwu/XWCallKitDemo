@@ -26,6 +26,7 @@
 }
 
 - (IBAction)SimulateIncomingCallWithCallKit:(id)sender {
+    [self.view endEditing:YES];
     NSString * number = _NumberTF.text;
     if (_NumberTF.text == nil )  number = @"10086";
     if (!callCenter) {
@@ -60,7 +61,7 @@
 }
 
 - (IBAction)endCall:(id)sender {
-    
+    [self.view endEditing:YES];
     NSUUID * callUUID=callCenter.currentCallUUID;
     
     [callCenter endCall:callUUID completion:^(NSError * _Nullable error){
@@ -77,6 +78,7 @@
 }
 
 - (IBAction)makeOutgoingVoipCall:(id)sender {
+    [self.view endEditing:YES];
     //想真正呼出外呼电话 工程需要工程支持VoIP功能咯
     //CallKit本身并不具备VoIP功能 明白了吗？
     

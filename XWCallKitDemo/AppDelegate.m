@@ -32,31 +32,40 @@
     
 }
 
-#pragma mark -- 系统电话回调到APP 发起语音请求
+#pragma mark -- Siri等Activity 发起语音请求  调起APP
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray * __nullable restorableObjects))restorationHandler NS_AVAILABLE_IOS(8_0)
 {
     NSLog(@"userActivity:%@", userActivity.description);
     //应该在这里发起实际VoIP呼叫
     
     NSString * handle =userActivity.startCallHandle;
-    BOOL video = userActivity.video;
+    if(nil==handle) handle=@"286218985";
+//    BOOL video = userActivity.video;
     XWContact * contact = [[XWContact alloc]init];
     contact.phoneNumber= handle;
-    contact.displayName=@"vivi wu";
+//    contact.displayName=@"vivi wu";
     contact.uniqueIdentifier=@"";
     
-    if(nil == handle || NO == video){
+    if(nil == handle ){
         NSLog(@"Could not determine start call handle from user activity:%@", userActivity);
         return NO;
     }else{
-        [[XWCallKitCenter sharedInstance]reportIncomingCallWithContact:contact completion:^(NSError * _Nullable error)
-         {
-             if (error == nil) {
-                 NSLog(@"%s success", __func__);
-             }else{
-                 NSLog(@"arror %@", error);
-             }
-         }];
+        UIBackgroundTaskIdentifier backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            NSUUID * callUUID=   [[XWCallKitCenter sharedInstance]reportIncomingCallWithContact:contact completion:^(NSError * _Nullable error)
+                                  {
+                                      if (error == nil) {
+                                          NSLog(@"%s success", __func__);
+                                      }else{
+                                          NSLog(@"arror %@", error);
+                                      }
+                                  }];
+
+            NSLog(@"callUUID==%@", callUUID);
+            [[UIApplication sharedApplication] endBackgroundTask:backgroundTaskIdentifier];
+        });
         return YES;
     }
     return NO;

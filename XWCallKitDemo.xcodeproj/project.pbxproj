@@ -25,6 +25,8 @@
 		0DC612211DA6A48C00972DF4 /* CallAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC612191DA6A48C00972DF4 /* CallAudio.m */; };
 		0DC612221DA6A48C00972DF4 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DC6121B1DA6A48C00972DF4 /* CAStreamBasicDescription.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0DC612231DA6A48C00972DF4 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DC6121D1DA6A48C00972DF4 /* CAXException.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DE8AFAB1DC1D7EF002CA158 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8AFAA1DC1D7EF002CA158 /* IntentHandler.m */; };
+		0DE8AFAF1DC1D7EF002CA158 /* XWCallKitIntentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0DE8AFA71DC1D7EF002CA158 /* XWCallKitIntentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,28 @@
 			remoteGlobalIDString = 0DC611D61DA6959F00972DF4;
 			remoteInfo = XWCallKitDemo;
 		};
+		0DE8AFAD1DC1D7EF002CA158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DC611CF1DA6959F00972DF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DE8AFA61DC1D7EF002CA158;
+			remoteInfo = XWCallKitIntentExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0DE8AFA21DC1D674002CA158 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0DE8AFAF1DC1D7EF002CA158 /* XWCallKitIntentExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D26DB9E1DC1A62900F20CB2 /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
@@ -81,6 +104,13 @@
 		0DC6121C1DA6A48C00972DF4 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
 		0DC6121D1DA6A48C00972DF4 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		0DC6121E1DA6A48C00972DF4 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		0DE8AF8C1DC1D674002CA158 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		0DE8AFA71DC1D7EF002CA158 /* XWCallKitIntentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XWCallKitIntentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE8AFA91DC1D7EF002CA158 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
+		0DE8AFAA1DC1D7EF002CA158 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
+		0DE8AFAC1DC1D7EF002CA158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE8AFB31DC1E072002CA158 /* XWCallKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XWCallKitDemo.entitlements; sourceTree = "<group>"; };
+		0DE8AFB41DC1E07F002CA158 /* XWCallKitIntentExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XWCallKitIntentExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +129,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0DC611F81DA6959F00972DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8AFA41DC1D7EF002CA158 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,6 +164,8 @@
 				0DC611D91DA6959F00972DF4 /* XWCallKitDemo */,
 				0DC611F31DA6959F00972DF4 /* XWCallKitDemoTests */,
 				0DC611FE1DA6959F00972DF4 /* XWCallKitDemoUITests */,
+				0DE8AFA81DC1D7EF002CA158 /* XWCallKitIntentExtension */,
+				0DE8AF8B1DC1D674002CA158 /* Frameworks */,
 				0DC611D81DA6959F00972DF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +176,7 @@
 				0DC611D71DA6959F00972DF4 /* XWCallKitDemo.app */,
 				0DC611F01DA6959F00972DF4 /* XWCallKitDemoTests.xctest */,
 				0DC611FB1DA6959F00972DF4 /* XWCallKitDemoUITests.xctest */,
+				0DE8AFA71DC1D7EF002CA158 /* XWCallKitIntentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +184,7 @@
 		0DC611D91DA6959F00972DF4 /* XWCallKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0DE8AFB31DC1E072002CA158 /* XWCallKitDemo.entitlements */,
 				0D441FC01DA7868F00F80421 /* logo.png */,
 				0DC611DD1DA6959F00972DF4 /* AppDelegate.h */,
 				0DC611DE1DA6959F00972DF4 /* AppDelegate.m */,
@@ -206,6 +247,25 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		0DE8AF8B1DC1D674002CA158 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8AF8C1DC1D674002CA158 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DE8AFA81DC1D7EF002CA158 /* XWCallKitIntentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8AFB41DC1E07F002CA158 /* XWCallKitIntentExtension.entitlements */,
+				0DE8AFA91DC1D7EF002CA158 /* IntentHandler.h */,
+				0DE8AFAA1DC1D7EF002CA158 /* IntentHandler.m */,
+				0DE8AFAC1DC1D7EF002CA158 /* Info.plist */,
+			);
+			path = XWCallKitIntentExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,10 +276,12 @@
 				0DC611D31DA6959F00972DF4 /* Sources */,
 				0DC611D41DA6959F00972DF4 /* Frameworks */,
 				0DC611D51DA6959F00972DF4 /* Resources */,
+				0DE8AFA21DC1D674002CA158 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0DE8AFAE1DC1D7EF002CA158 /* PBXTargetDependency */,
 			);
 			name = XWCallKitDemo;
 			productName = XWCallKitDemo;
@@ -262,6 +324,23 @@
 			productReference = 0DC611FB1DA6959F00972DF4 /* XWCallKitDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0DE8AFA61DC1D7EF002CA158 /* XWCallKitIntentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE8AFB21DC1D7EF002CA158 /* Build configuration list for PBXNativeTarget "XWCallKitIntentExtension" */;
+			buildPhases = (
+				0DE8AFA31DC1D7EF002CA158 /* Sources */,
+				0DE8AFA41DC1D7EF002CA158 /* Frameworks */,
+				0DE8AFA51DC1D7EF002CA158 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XWCallKitIntentExtension;
+			productName = XWCallKitIntentExtension;
+			productReference = 0DE8AFA71DC1D7EF002CA158 /* XWCallKitIntentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -276,6 +355,9 @@
 						DevelopmentTeam = 3WV7R4EVUN;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -292,6 +374,16 @@
 						DevelopmentTeam = 3WV7R4EVUN;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0DC611D61DA6959F00972DF4;
+					};
+					0DE8AFA61DC1D7EF002CA158 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3WV7R4EVUN;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -311,6 +403,7 @@
 				0DC611D61DA6959F00972DF4 /* XWCallKitDemo */,
 				0DC611EF1DA6959F00972DF4 /* XWCallKitDemoTests */,
 				0DC611FA1DA6959F00972DF4 /* XWCallKitDemoUITests */,
+				0DE8AFA61DC1D7EF002CA158 /* XWCallKitIntentExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -335,6 +428,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0DC611F91DA6959F00972DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8AFA51DC1D7EF002CA158 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,6 +479,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DE8AFA31DC1D7EF002CA158 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE8AFAB1DC1D7EF002CA158 /* IntentHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -391,6 +499,11 @@
 			isa = PBXTargetDependency;
 			target = 0DC611D61DA6959F00972DF4 /* XWCallKitDemo */;
 			targetProxy = 0DC611FC1DA6959F00972DF4 /* PBXContainerItemProxy */;
+		};
+		0DE8AFAE1DC1D7EF002CA158 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DE8AFA61DC1D7EF002CA158 /* XWCallKitIntentExtension */;
+			targetProxy = 0DE8AFAD1DC1D7EF002CA158 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -578,6 +691,32 @@
 			};
 			name = Release;
 		};
+		0DE8AFB01DC1D7EF002CA158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3WV7R4EVUN;
+				INFOPLIST_FILE = XWCallKitIntentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WU.XWCallKitDemo.XWCallKitIntentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0DE8AFB11DC1D7EF002CA158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3WV7R4EVUN;
+				INFOPLIST_FILE = XWCallKitIntentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WU.XWCallKitDemo.XWCallKitIntentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -616,6 +755,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0DE8AFB21DC1D7EF002CA158 /* Build configuration list for PBXNativeTarget "XWCallKitIntentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE8AFB01DC1D7EF002CA158 /* Debug */,
+				0DE8AFB11DC1D7EF002CA158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

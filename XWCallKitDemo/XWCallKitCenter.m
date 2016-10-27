@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)configurationCallProvider{
     
-    NSString *localizedName = @"XWCall";    //本地显示的应用名字
+    NSString *localizedName = @"游游通";    //本地显示的应用名字
     CXProviderConfiguration *configuration = [[CXProviderConfiguration alloc] initWithLocalizedName:localizedName];
     configuration.supportsVideo = NO;
     configuration.maximumCallsPerCallGroup = 1;
