@@ -25,48 +25,67 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)makeCall:(id)sender {
-    if (_NumberTF.text == nil ) {
-        return;
-    }
+- (IBAction)SimulateIncomingCallWithCallKit:(id)sender {
+    NSString * number = _NumberTF.text;
+    if (_NumberTF.text == nil )  number = @"10086";
     if (!callCenter) {
         callCenter=[XWCallKitCenter sharedInstance];
     }
-    
-#if 01
+ 
     XWContact * contact = [[XWContact alloc]init];
-    contact.phoneNumber= _NumberTF.text;
-    contact.displayName=@"VIVI";
+    contact.phoneNumber= number;
+    contact.displayName=@"vivi wu";
     contact.uniqueIdentifier=@"";
     
     UIBackgroundTaskIdentifier backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
         NSUUID * callUUID=[[XWCallKitCenter sharedInstance] reportIncomingCallWithContact:contact completion:^(NSError * _Nullable error)
-                           {
-                               if (error == nil) {
-                                   
-                               }else{
-                                   NSLog(@"arror %@", error);
-                               } 
-                           }];
+        {
+            if (error == nil) {
+                NSLog(@"%s success", __func__);
+//                XWCall *call = [[XWCall alloc] initWithUUID:uuid];
+//                call.handle = handle;
+//                //            [weakSelf.callManager addCall:call];
+//                [[XWCallManager sharedManager] addCall:call];
+            }else{
+                NSLog(@"arror %@", error);
+            }
+        }];
         NSLog(@"callUUID==%@", callUUID);
         [[UIApplication sharedApplication] endBackgroundTask:backgroundTaskIdentifier];
     });
-#endif
     
 }
 
 - (IBAction)endCall:(id)sender {
     
-    NSUUID * callUUID=callCenter.callUUID;
-    CXEndCallAction* endCallAction=[[CXEndCallAction alloc]initWithCallUUID:callUUID];
-    CXTransaction* transaction=[[CXTransaction alloc]init];
-    [transaction addAction:endCallAction];
+    NSUUID * callUUID=callCenter.currentCallUUID;
     
-    [callCenter requestTransaction:transaction];
+    [callCenter endCall:callUUID completion:^(NSError * _Nullable error){
+        if (nil==error) {
+            NSLog(@"%s success", __func__);
+        }else{
+            NSLog(@"arror %@", error);
+        }
+    }];
+//    CXEndCallAction* endCallAction=[[CXEndCallAction alloc]initWithCallUUID:callUUID];
+//    CXTransaction* transaction=[[CXTransaction alloc]init];
+//    [transaction addAction:endCallAction];
+//    [callCenter requestTransaction:transaction];
 }
 
+- (IBAction)makeOutgoingVoipCall:(id)sender {
+    //想真正呼出外呼电话 工程需要工程支持VoIP功能咯
+    //CallKit本身并不具备VoIP功能 明白了吗？
+    
+}
+
+
+- (IBAction)endAllEditAction:(id)sender {
+    [self.view endEditing:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

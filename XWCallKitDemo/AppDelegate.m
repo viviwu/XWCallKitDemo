@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "XWCallKitCenter.h"
 #import <CallKit/CallKit.h>
-
+#import "NSUserActivity+XWExt.h"
 
 @interface AppDelegate ()
 
@@ -38,17 +38,37 @@
     NSLog(@"userActivity:%@", userActivity.description);
     //应该在这里发起实际VoIP呼叫
     
-//    NSString * handle =userActivity.startCallHandle;
-//    BOOL video = userActivity.video;
-//    if(nil == handle || NO == video){
-//        NSLog(@"Could not determine start call handle from user activity:%@", userActivity);
-//        return NO;
-//    }else{
-//        [[XWCallManager sharedManager] startCall:handle video:video];
-//        return YES;
-//    }
+    NSString * handle =userActivity.startCallHandle;
+    BOOL video = userActivity.video;
+    XWContact * contact = [[XWContact alloc]init];
+    contact.phoneNumber= handle;
+    contact.displayName=@"vivi wu";
+    contact.uniqueIdentifier=@"";
+    
+    if(nil == handle || NO == video){
+        NSLog(@"Could not determine start call handle from user activity:%@", userActivity);
+        return NO;
+    }else{
+        [[XWCallKitCenter sharedInstance]reportIncomingCallWithContact:contact completion:^(NSError * _Nullable error)
+         {
+             if (error == nil) {
+                 NSLog(@"%s success", __func__);
+             }else{
+                 NSLog(@"arror %@", error);
+             }
+         }];
+        return YES;
+    }
     return NO;
 }
+
+
+//接收通过某种Activity调回来的操作：
+- (void)application:(UIApplication *)application didUpdateUserActivity:(NSUserActivity *)userActivity{
+    
+}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

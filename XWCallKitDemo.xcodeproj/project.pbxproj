@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D26DBA41DC1A62900F20CB2 /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D26DB9F1DC1A62900F20CB2 /* NSObject+DLIntrospection.m */; };
+		0D26DBA51DC1A62900F20CB2 /* NSURL+XWStartCallConvertible.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D26DBA11DC1A62900F20CB2 /* NSURL+XWStartCallConvertible.m */; };
+		0D26DBA61DC1A62900F20CB2 /* NSUserActivity+XWExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D26DBA31DC1A62900F20CB2 /* NSUserActivity+XWExt.m */; };
 		0D441FC11DA7868F00F80421 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D441FC01DA7868F00F80421 /* logo.png */; };
 		0DC611DC1DA6959F00972DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC611DB1DA6959F00972DF4 /* main.m */; };
 		0DC611DF1DA6959F00972DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC611DE1DA6959F00972DF4 /* AppDelegate.m */; };
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D26DB9E1DC1A62900F20CB2 /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
+		0D26DB9F1DC1A62900F20CB2 /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
+		0D26DBA01DC1A62900F20CB2 /* NSURL+XWStartCallConvertible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+XWStartCallConvertible.h"; sourceTree = "<group>"; };
+		0D26DBA11DC1A62900F20CB2 /* NSURL+XWStartCallConvertible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+XWStartCallConvertible.m"; sourceTree = "<group>"; };
+		0D26DBA21DC1A62900F20CB2 /* NSUserActivity+XWExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserActivity+XWExt.h"; sourceTree = "<group>"; };
+		0D26DBA31DC1A62900F20CB2 /* NSUserActivity+XWExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserActivity+XWExt.m"; sourceTree = "<group>"; };
 		0D441FC01DA7868F00F80421 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0DC611D71DA6959F00972DF4 /* XWCallKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWCallKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC611DB1DA6959F00972DF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +108,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D26DB9D1DC1A62900F20CB2 /* UserActivityExt */ = {
+			isa = PBXGroup;
+			children = (
+				0D26DB9E1DC1A62900F20CB2 /* NSObject+DLIntrospection.h */,
+				0D26DB9F1DC1A62900F20CB2 /* NSObject+DLIntrospection.m */,
+				0D26DBA01DC1A62900F20CB2 /* NSURL+XWStartCallConvertible.h */,
+				0D26DBA11DC1A62900F20CB2 /* NSURL+XWStartCallConvertible.m */,
+				0D26DBA21DC1A62900F20CB2 /* NSUserActivity+XWExt.h */,
+				0D26DBA31DC1A62900F20CB2 /* NSUserActivity+XWExt.m */,
+			);
+			path = UserActivityExt;
+			sourceTree = "<group>";
+		};
 		0DC611CE1DA6959F00972DF4 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +151,7 @@
 				0DC612111DA69F4200972DF4 /* XWCallKitCenter.m */,
 				0DC611E01DA6959F00972DF4 /* ViewController.h */,
 				0DC611E11DA6959F00972DF4 /* ViewController.m */,
+				0D26DB9D1DC1A62900F20CB2 /* UserActivityExt */,
 				0DC612131DA6A48C00972DF4 /* Audio */,
 				0DC611E31DA6959F00972DF4 /* Main.storyboard */,
 				0DC611E61DA6959F00972DF4 /* Assets.xcassets */,
@@ -330,10 +353,13 @@
 				0DC612211DA6A48C00972DF4 /* CallAudio.m in Sources */,
 				0DC612121DA69F4200972DF4 /* XWCallKitCenter.m in Sources */,
 				0DC612221DA6A48C00972DF4 /* CAStreamBasicDescription.cpp in Sources */,
+				0D26DBA51DC1A62900F20CB2 /* NSURL+XWStartCallConvertible.m in Sources */,
 				0DC611DF1DA6959F00972DF4 /* AppDelegate.m in Sources */,
 				0DC611DC1DA6959F00972DF4 /* main.m in Sources */,
 				0DC612201DA6A48C00972DF4 /* CADebugMacros.cpp in Sources */,
+				0D26DBA61DC1A62900F20CB2 /* NSUserActivity+XWExt.m in Sources */,
 				0DC6121F1DA6A48C00972DF4 /* AudioController.mm in Sources */,
+				0D26DBA41DC1A62900F20CB2 /* NSObject+DLIntrospection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

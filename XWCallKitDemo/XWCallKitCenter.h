@@ -4,7 +4,7 @@
 //
 //  Created by viviwu on 16/10/6.
 //  Copyright © 2016年 viviwu. All rights reserved.
-//
+//  contact：286218985@qq.com；weibo：_viviwu_
 
 #import <Foundation/Foundation.h>
 #import <CallKit/CallKit.h>
@@ -49,7 +49,7 @@ typedef void(^XWCallKitActionNotificationBlock)(CXCallAction * action, XWCallAct
 
 @property (nonatomic, strong) CXProvider *provider;
 @property (nonatomic, strong) dispatch_queue_t completionQueue; // Default to mainQueue
-@property (nonatomic, copy) NSUUID * callUUID;
+@property (nonatomic, copy) NSUUID * currentCallUUID;
 
 + (XWCallKitCenter *)sharedInstance;
 
@@ -60,8 +60,7 @@ typedef void(^XWCallKitActionNotificationBlock)(CXCallAction * action, XWCallAct
 //无论何种操作都需要 话务控制器 去 提交请求 给系统
 -(void)requestTransaction:(CXTransaction *)transaction;
 
-//告诉系统 我们播出了一条电话 请加入到通话记录
-- (NSUUID *)reportOutgoingCallWithContact:(XWContact *)contact completion:(XWCallKitCenterCompletion)completion;
+//- (NSUUID *)reportOutgoingCallWithContact:(XWContact *)contact completion:(XWCallKitCenterCompletion)completion;
 
 - (void)updateCall:(NSUUID *)callUUID state:(XWCallState)state;
 

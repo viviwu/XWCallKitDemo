@@ -54,6 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark--providerConfiguration
 
 - (void)configurationCallProvider{
+    
     NSString *localizedName = @"XWCall";    //本地显示的应用名字
     CXProviderConfiguration *configuration = [[CXProviderConfiguration alloc] initWithLocalizedName:localizedName];
     configuration.supportsVideo = NO;
@@ -78,20 +79,20 @@ NS_ASSUME_NONNULL_BEGIN
     }
 }
 
-//让系统来接管播报一个新的来电,
+//让系统来接管播报一个新的来电,CallKit
 - (NSUUID *)reportIncomingCallWithContact:(XWContact *)contact completion:(XWCallKitCenterCompletion)completion
 {
     NSString * number = contact.phoneNumber;
     CXHandle* handle=[[CXHandle alloc]initWithType:CXHandleTypePhoneNumber value:number];
     NSUUID *callUUID = [NSUUID UUID];
-    _callUUID=callUUID;
+    _currentCallUUID=callUUID;
     
     CXCallUpdate *callUpdate = [[CXCallUpdate alloc] init];
     callUpdate.remoteHandle = handle;
     callUpdate.localizedCallerName = contact.displayName;
     [self.provider reportNewIncomingCallWithUUID:callUUID update:callUpdate completion:completion];
     
-    [self.provider reportCallWithUUID:_callUUID updated:callUpdate];
+    [self.provider reportCallWithUUID:_currentCallUUID updated:callUpdate];
     
     return callUUID;
 }
@@ -99,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSUUID *)reportOutgoingCall:(NSUUID *)callUUID startedConnectingAtDate:(NSDate*)startDate
 {
-    _callUUID=callUUID;
+    _currentCallUUID=callUUID;
     [self.provider reportOutgoingCallWithUUID:callUUID startedConnectingAtDate:startDate];
     return callUUID;
 }
@@ -163,19 +164,19 @@ NS_ASSUME_NONNULL_BEGIN
     }];
 }
 
-//告诉系统 我们播出了一条电话 请加入到通话记录
-- (NSUUID *)reportOutgoingCallWithContact:(XWContact *)contact completion:(XWCallKitCenterCompletion)completion
-{
-    CXHandle* handle=[[CXHandle alloc]initWithType:CXHandleTypePhoneNumber value:contact.phoneNumber];
-    _callUUID = [NSUUID UUID];
-    CXStartCallAction *action = [[CXStartCallAction alloc] initWithCallUUID:_callUUID handle: handle];
-    action.contactIdentifier = [contact uniqueIdentifier];
-    
-    CXTransaction * transaction = [CXTransaction transactionWithActions:@[action]];
-    
-    [self requestTransaction:transaction];
-    return _callUUID;
-}
+
+//- (NSUUID *)reportOutgoingCallWithContact:(XWContact *)contact completion:(XWCallKitCenterCompletion)completion
+//{
+//    CXHandle* handle=[[CXHandle alloc]initWithType:CXHandleTypePhoneNumber value:contact.phoneNumber];
+//    _callUUID = [NSUUID UUID];
+//    CXStartCallAction *action = [[CXStartCallAction alloc] initWithCallUUID:_callUUID handle: handle];
+//    action.contactIdentifier = [contact uniqueIdentifier];
+//    
+//    CXTransaction * transaction = [CXTransaction transactionWithActions:@[action]];
+//    
+//    [self requestTransaction:transaction];
+//    return _callUUID;
+//}
 
 - (void)updateCall:(NSUUID *)callUUID state:(XWCallState)state
 {
@@ -223,6 +224,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)provider:(CXProvider *)provider performAnswerCallAction:(nonnull CXAnswerCallAction *)action {
+    NSLog(@"%s", __func__);
     if (self.actionNotificationBlock) {
         self.actionNotificationBlock(action, XWCallActionTypeAnswer);
     }
@@ -230,6 +232,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)provider:(CXProvider *)provider performEndCallAction:(nonnull CXEndCallAction *)action {
+    NSLog(@"%s", __func__);
     if (self.actionNotificationBlock) {
         self.actionNotificationBlock(action, XWCallActionTypeEnd);
     }
@@ -237,6 +240,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)provider:(CXProvider *)provider performStartCallAction:(nonnull CXStartCallAction *)action {
+    NSLog(@"%s", __func__);
     if (self.actionNotificationBlock) {
         self.actionNotificationBlock(action, XWCallActionTypeStart);
     } //destination
@@ -248,6 +252,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)provider:(CXProvider *)provider performSetMutedCallAction:(nonnull CXSetMutedCallAction *)action {
+    NSLog(@"%s", __func__);
     if (self.actionNotificationBlock) {
         self.actionNotificationBlock(action, XWCallActionTypeMute);
     }
@@ -255,10 +260,12 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)provider:(CXProvider *)provider performSetHeldCallAction:(nonnull CXSetHeldCallAction *)action {
+    NSLog(@"%s", __func__);
     if (self.actionNotificationBlock) {
         self.actionNotificationBlock(action, XWCallActionTypeHeld);
     }
     [action fulfill];
 }
 @end
+
 NS_ASSUME_NONNULL_END
