@@ -32,7 +32,7 @@
     
 }
 
-#pragma mark -- Siri等Activity 发起语音请求  调起APP
+#pragma mark --点击通话记录 Siri等UserActivity 发起语音请求  调起APP
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray * __nullable restorableObjects))restorationHandler NS_AVAILABLE_IOS(8_0)
 {
     NSLog(@"userActivity:%@", userActivity.description);
