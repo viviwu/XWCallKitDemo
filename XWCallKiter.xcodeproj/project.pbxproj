@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DDAA32B2294DB9E0063F88C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA32A2294DB9E0063F88C /* AppDelegate.m */; };
+		0DDAA3312294DB9E0063F88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA32F2294DB9E0063F88C /* Main.storyboard */; };
+		0DDAA3332294DBA00063F88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA3322294DBA00063F88C /* Assets.xcassets */; };
+		0DDAA3362294DBA00063F88C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA3342294DBA00063F88C /* LaunchScreen.storyboard */; };
+		0DDAA3392294DBA00063F88C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3382294DBA00063F88C /* main.m */; };
+		0DDAA3412294DBBE0063F88C /* ProviderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3402294DBBE0063F88C /* ProviderDelegate.m */; };
+		0DDAA3472294DBFB0063F88C /* DialOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3462294DBFB0063F88C /* DialOptionsViewController.m */; };
+		0DDAA34A2294DC0C0063F88C /* SimulateIncomingCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3492294DC0C0063F88C /* SimulateIncomingCallViewController.m */; };
+		0DDAA34D2294DC240063F88C /* CallSummaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA34C2294DC240063F88C /* CallSummaryTableViewCell.m */; };
+		0DDAA3502294DC3B0063F88C /* XWCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA34F2294DC3B0063F88C /* XWCallManager.m */; };
+		0DDAA3532294DD520063F88C /* XWCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3522294DD520063F88C /* XWCall.m */; };
+		0DDAA3762294E6DF0063F88C /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA36F2294E6DF0063F88C /* CADebugMacros.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DDAA3772294E6DF0063F88C /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3702294E6DF0063F88C /* CAXException.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DDAA3782294E6DF0063F88C /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3732294E6DF0063F88C /* CAStreamBasicDescription.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DDAA3792294E6DF0063F88C /* AudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3742294E6DF0063F88C /* AudioController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DDAA37F2294E9840063F88C /* CallAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA37D2294E9840063F88C /* CallAudio.m */; };
+		0DDAA38222950FB30063F88C /* CallDurationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA38122950FB30063F88C /* CallDurationFormatter.m */; };
+		0DDAA385229512FC0063F88C /* UIFont+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA384229512FC0063F88C /* UIFont+XW.m */; };
+		0DDAA392229654940063F88C /* CallsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA391229654940063F88C /* CallsViewController.m */; };
+		0DDAA39D229696700063F88C /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA39C229696700063F88C /* IntentHandler.m */; };
+		0DDAA3A6229696700063F88C /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDAA3A5229696700063F88C /* IntentsUI.framework */; };
+		0DDAA3AA229696700063F88C /* IntentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3A9229696700063F88C /* IntentViewController.m */; };
+		0DDAA3AD229696700063F88C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA3AB229696700063F88C /* MainInterface.storyboard */; };
+		0DDAA3B1229696700063F88C /* IntentsExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0DDAA3A3229696700063F88C /* IntentsExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0DDAA3B4229696700063F88C /* IntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0DDAA399229696700063F88C /* IntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0DDAA3BD22969A280063F88C /* Ringtone.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA3BC22969A280063F88C /* Ringtone.caf */; };
+		0DDAA3BF22969DB30063F88C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA3BE22969DB30063F88C /* Localizable.strings */; };
+		0DDAA3C22296A07C0063F88C /* NSUserActivity+CallKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3C12296A07C0063F88C /* NSUserActivity+CallKit.m */; };
+		0DDAA3C52296A0D70063F88C /* NSURL+CallKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA3C42296A0D70063F88C /* NSURL+CallKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DDAA3AF229696700063F88C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DDAA31E2294DB9E0063F88C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDAA3A2229696700063F88C;
+			remoteInfo = IntentsExtensionUI;
+		};
+		0DDAA3B2229696700063F88C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DDAA31E2294DB9E0063F88C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDAA398229696700063F88C;
+			remoteInfo = IntentsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0DDAA3BB229696700063F88C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0DDAA3B4229696700063F88C /* IntentsExtension.appex in Embed App Extensions */,
+				0DDAA3B1229696700063F88C /* IntentsExtensionUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0DDAA3262294DB9E0063F88C /* XWCallKiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWCallKiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDAA3292294DB9E0063F88C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0DDAA32A2294DB9E0063F88C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0DDAA3302294DB9E0063F88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0DDAA3322294DBA00063F88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DDAA3352294DBA00063F88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0DDAA3372294DBA00063F88C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDAA3382294DBA00063F88C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DDAA33F2294DBBE0063F88C /* ProviderDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProviderDelegate.h; sourceTree = "<group>"; };
+		0DDAA3402294DBBE0063F88C /* ProviderDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProviderDelegate.m; sourceTree = "<group>"; };
+		0DDAA3452294DBFB0063F88C /* DialOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialOptionsViewController.h; sourceTree = "<group>"; };
+		0DDAA3462294DBFB0063F88C /* DialOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialOptionsViewController.m; sourceTree = "<group>"; };
+		0DDAA3482294DC0C0063F88C /* SimulateIncomingCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulateIncomingCallViewController.h; sourceTree = "<group>"; };
+		0DDAA3492294DC0C0063F88C /* SimulateIncomingCallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulateIncomingCallViewController.m; sourceTree = "<group>"; };
+		0DDAA34B2294DC240063F88C /* CallSummaryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallSummaryTableViewCell.h; sourceTree = "<group>"; };
+		0DDAA34C2294DC240063F88C /* CallSummaryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallSummaryTableViewCell.m; sourceTree = "<group>"; };
+		0DDAA34E2294DC3B0063F88C /* XWCallManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XWCallManager.h; sourceTree = "<group>"; };
+		0DDAA34F2294DC3B0063F88C /* XWCallManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWCallManager.m; sourceTree = "<group>"; };
+		0DDAA3512294DD520063F88C /* XWCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XWCall.h; sourceTree = "<group>"; };
+		0DDAA3522294DD520063F88C /* XWCall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWCall.m; sourceTree = "<group>"; };
+		0DDAA3582294E2AF0063F88C /* StartCallConvertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartCallConvertible.h; sourceTree = "<group>"; };
+		0DDAA36D2294E6DF0063F88C /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		0DDAA36E2294E6DF0063F88C /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		0DDAA36F2294E6DF0063F88C /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		0DDAA3702294E6DF0063F88C /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		0DDAA3712294E6DF0063F88C /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		0DDAA3722294E6DF0063F88C /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		0DDAA3732294E6DF0063F88C /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		0DDAA3742294E6DF0063F88C /* AudioController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioController.mm; sourceTree = "<group>"; };
+		0DDAA3752294E6DF0063F88C /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		0DDAA37D2294E9840063F88C /* CallAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallAudio.m; sourceTree = "<group>"; };
+		0DDAA37E2294E9840063F88C /* CallAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallAudio.h; sourceTree = "<group>"; };
+		0DDAA38022950FB30063F88C /* CallDurationFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallDurationFormatter.h; sourceTree = "<group>"; };
+		0DDAA38122950FB30063F88C /* CallDurationFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallDurationFormatter.m; sourceTree = "<group>"; };
+		0DDAA383229512FC0063F88C /* UIFont+XW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+XW.h"; sourceTree = "<group>"; };
+		0DDAA384229512FC0063F88C /* UIFont+XW.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+XW.m"; sourceTree = "<group>"; };
+		0DDAA390229654940063F88C /* CallsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallsViewController.h; sourceTree = "<group>"; };
+		0DDAA391229654940063F88C /* CallsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallsViewController.m; sourceTree = "<group>"; };
+		0DDAA394229695CC0063F88C /* XWCallkiter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XWCallkiter.entitlements; sourceTree = "<group>"; };
+		0DDAA399229696700063F88C /* IntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDAA39B229696700063F88C /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
+		0DDAA39C229696700063F88C /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
+		0DDAA39E229696700063F88C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDAA3A3229696700063F88C /* IntentsExtensionUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentsExtensionUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDAA3A5229696700063F88C /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		0DDAA3A8229696700063F88C /* IntentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentViewController.h; sourceTree = "<group>"; };
+		0DDAA3A9229696700063F88C /* IntentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentViewController.m; sourceTree = "<group>"; };
+		0DDAA3AC229696700063F88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0DDAA3AE229696700063F88C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDAA3BC22969A280063F88C /* Ringtone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ringtone.caf; sourceTree = "<group>"; };
+		0DDAA3BE22969DB30063F88C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0DDAA3C02296A07C0063F88C /* NSUserActivity+CallKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserActivity+CallKit.h"; sourceTree = "<group>"; };
+		0DDAA3C12296A07C0063F88C /* NSUserActivity+CallKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserActivity+CallKit.m"; sourceTree = "<group>"; };
+		0DDAA3C32296A0D70063F88C /* NSURL+CallKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+CallKit.h"; sourceTree = "<group>"; };
+		0DDAA3C42296A0D70063F88C /* NSURL+CallKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CallKit.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DDAA3232294DB9E0063F88C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDAA396229696700063F88C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDAA3A0229696700063F88C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDAA3A6229696700063F88C /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DDAA31D2294DB9E0063F88C = {
+			isa = PBXGroup;
+			children = (
+				0DDAA3282294DB9E0063F88C /* XWCallkiter */,
+				0DDAA39A229696700063F88C /* IntentsExtension */,
+				0DDAA3A7229696700063F88C /* IntentsExtensionUI */,
+				0DDAA3A4229696700063F88C /* Frameworks */,
+				0DDAA3272294DB9E0063F88C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0DDAA3272294DB9E0063F88C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA3262294DB9E0063F88C /* XWCallKiter.app */,
+				0DDAA399229696700063F88C /* IntentsExtension.appex */,
+				0DDAA3A3229696700063F88C /* IntentsExtensionUI.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DDAA3282294DB9E0063F88C /* XWCallkiter */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA394229695CC0063F88C /* XWCallkiter.entitlements */,
+				0DDAA3292294DB9E0063F88C /* AppDelegate.h */,
+				0DDAA32A2294DB9E0063F88C /* AppDelegate.m */,
+				0DDAA38A229546FA0063F88C /* Call Management */,
+				0DDAA393229675EE0063F88C /* UIViews+ */,
+				0DDAA389229546D30063F88C /* Start Call Handling */,
+				0DDAA36C2294E6DF0063F88C /* Audio */,
+				0DDAA32F2294DB9E0063F88C /* Main.storyboard */,
+				0DDAA3BC22969A280063F88C /* Ringtone.caf */,
+				0DDAA3322294DBA00063F88C /* Assets.xcassets */,
+				0DDAA3342294DBA00063F88C /* LaunchScreen.storyboard */,
+				0DDAA3372294DBA00063F88C /* Info.plist */,
+				0DDAA3BE22969DB30063F88C /* Localizable.strings */,
+				0DDAA3382294DBA00063F88C /* main.m */,
+			);
+			path = XWCallkiter;
+			sourceTree = "<group>";
+		};
+		0DDAA36C2294E6DF0063F88C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA3752294E6DF0063F88C /* CAMath.h */,
+				0DDAA37E2294E9840063F88C /* CallAudio.h */,
+				0DDAA37D2294E9840063F88C /* CallAudio.m */,
+				0DDAA36E2294E6DF0063F88C /* AudioController.h */,
+				0DDAA3742294E6DF0063F88C /* AudioController.mm */,
+				0DDAA3722294E6DF0063F88C /* CADebugMacros.h */,
+				0DDAA36F2294E6DF0063F88C /* CADebugMacros.cpp */,
+				0DDAA3712294E6DF0063F88C /* CAXException.h */,
+				0DDAA3702294E6DF0063F88C /* CAXException.cpp */,
+				0DDAA36D2294E6DF0063F88C /* CAStreamBasicDescription.h */,
+				0DDAA3732294E6DF0063F88C /* CAStreamBasicDescription.cpp */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		0DDAA389229546D30063F88C /* Start Call Handling */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA3582294E2AF0063F88C /* StartCallConvertible.h */,
+				0DDAA3C32296A0D70063F88C /* NSURL+CallKit.h */,
+				0DDAA3C42296A0D70063F88C /* NSURL+CallKit.m */,
+				0DDAA3C02296A07C0063F88C /* NSUserActivity+CallKit.h */,
+				0DDAA3C12296A07C0063F88C /* NSUserActivity+CallKit.m */,
+				0DDAA38022950FB30063F88C /* CallDurationFormatter.h */,
+				0DDAA38122950FB30063F88C /* CallDurationFormatter.m */,
+				0DDAA383229512FC0063F88C /* UIFont+XW.h */,
+				0DDAA384229512FC0063F88C /* UIFont+XW.m */,
+			);
+			name = "Start Call Handling";
+			sourceTree = "<group>";
+		};
+		0DDAA38A229546FA0063F88C /* Call Management */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA33F2294DBBE0063F88C /* ProviderDelegate.h */,
+				0DDAA3402294DBBE0063F88C /* ProviderDelegate.m */,
+				0DDAA34E2294DC3B0063F88C /* XWCallManager.h */,
+				0DDAA34F2294DC3B0063F88C /* XWCallManager.m */,
+				0DDAA3512294DD520063F88C /* XWCall.h */,
+				0DDAA3522294DD520063F88C /* XWCall.m */,
+			);
+			path = "Call Management";
+			sourceTree = "<group>";
+		};
+		0DDAA393229675EE0063F88C /* UIViews+ */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA390229654940063F88C /* CallsViewController.h */,
+				0DDAA391229654940063F88C /* CallsViewController.m */,
+				0DDAA34B2294DC240063F88C /* CallSummaryTableViewCell.h */,
+				0DDAA34C2294DC240063F88C /* CallSummaryTableViewCell.m */,
+				0DDAA3452294DBFB0063F88C /* DialOptionsViewController.h */,
+				0DDAA3462294DBFB0063F88C /* DialOptionsViewController.m */,
+				0DDAA3482294DC0C0063F88C /* SimulateIncomingCallViewController.h */,
+				0DDAA3492294DC0C0063F88C /* SimulateIncomingCallViewController.m */,
+			);
+			path = "UIViews+";
+			sourceTree = "<group>";
+		};
+		0DDAA39A229696700063F88C /* IntentsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA39B229696700063F88C /* IntentHandler.h */,
+				0DDAA39C229696700063F88C /* IntentHandler.m */,
+				0DDAA39E229696700063F88C /* Info.plist */,
+			);
+			path = IntentsExtension;
+			sourceTree = "<group>";
+		};
+		0DDAA3A4229696700063F88C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA3A5229696700063F88C /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DDAA3A7229696700063F88C /* IntentsExtensionUI */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA3A8229696700063F88C /* IntentViewController.h */,
+				0DDAA3A9229696700063F88C /* IntentViewController.m */,
+				0DDAA3AB229696700063F88C /* MainInterface.storyboard */,
+				0DDAA3AE229696700063F88C /* Info.plist */,
+			);
+			path = IntentsExtensionUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DDAA3252294DB9E0063F88C /* XWCallKiter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDAA33C2294DBA00063F88C /* Build configuration list for PBXNativeTarget "XWCallKiter" */;
+			buildPhases = (
+				0DDAA3222294DB9E0063F88C /* Sources */,
+				0DDAA3232294DB9E0063F88C /* Frameworks */,
+				0DDAA3242294DB9E0063F88C /* Resources */,
+				0DDAA3BB229696700063F88C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DDAA3B0229696700063F88C /* PBXTargetDependency */,
+				0DDAA3B3229696700063F88C /* PBXTargetDependency */,
+			);
+			name = XWCallKiter;
+			productName = XWCallKiter;
+			productReference = 0DDAA3262294DB9E0063F88C /* XWCallKiter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0DDAA398229696700063F88C /* IntentsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDAA3B8229696700063F88C /* Build configuration list for PBXNativeTarget "IntentsExtension" */;
+			buildPhases = (
+				0DDAA395229696700063F88C /* Sources */,
+				0DDAA396229696700063F88C /* Frameworks */,
+				0DDAA397229696700063F88C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntentsExtension;
+			productName = IntentsExtension;
+			productReference = 0DDAA399229696700063F88C /* IntentsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0DDAA3A2229696700063F88C /* IntentsExtensionUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDAA3B5229696700063F88C /* Build configuration list for PBXNativeTarget "IntentsExtensionUI" */;
+			buildPhases = (
+				0DDAA39F229696700063F88C /* Sources */,
+				0DDAA3A0229696700063F88C /* Frameworks */,
+				0DDAA3A1229696700063F88C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntentsExtensionUI;
+			productName = IntentsExtensionUI;
+			productReference = 0DDAA3A3229696700063F88C /* IntentsExtensionUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DDAA31E2294DB9E0063F88C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "vivi wu";
+				TargetAttributes = {
+					0DDAA3252294DB9E0063F88C = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					0DDAA398229696700063F88C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					0DDAA3A2229696700063F88C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 0DDAA3212294DB9E0063F88C /* Build configuration list for PBXProject "XWCallKiter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0DDAA31D2294DB9E0063F88C;
+			productRefGroup = 0DDAA3272294DB9E0063F88C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DDAA3252294DB9E0063F88C /* XWCallKiter */,
+				0DDAA398229696700063F88C /* IntentsExtension */,
+				0DDAA3A2229696700063F88C /* IntentsExtensionUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DDAA3242294DB9E0063F88C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDAA3362294DBA00063F88C /* LaunchScreen.storyboard in Resources */,
+				0DDAA3332294DBA00063F88C /* Assets.xcassets in Resources */,
+				0DDAA3BD22969A280063F88C /* Ringtone.caf in Resources */,
+				0DDAA3BF22969DB30063F88C /* Localizable.strings in Resources */,
+				0DDAA3312294DB9E0063F88C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDAA397229696700063F88C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDAA3A1229696700063F88C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDAA3AD229696700063F88C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DDAA3222294DB9E0063F88C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDAA3C52296A0D70063F88C /* NSURL+CallKit.m in Sources */,
+				0DDAA3392294DBA00063F88C /* main.m in Sources */,
+				0DDAA38222950FB30063F88C /* CallDurationFormatter.m in Sources */,
+				0DDAA32B2294DB9E0063F88C /* AppDelegate.m in Sources */,
+				0DDAA37F2294E9840063F88C /* CallAudio.m in Sources */,
+				0DDAA3792294E6DF0063F88C /* AudioController.mm in Sources */,
+				0DDAA3472294DBFB0063F88C /* DialOptionsViewController.m in Sources */,
+				0DDAA34D2294DC240063F88C /* CallSummaryTableViewCell.m in Sources */,
+				0DDAA3502294DC3B0063F88C /* XWCallManager.m in Sources */,
+				0DDAA385229512FC0063F88C /* UIFont+XW.m in Sources */,
+				0DDAA3532294DD520063F88C /* XWCall.m in Sources */,
+				0DDAA392229654940063F88C /* CallsViewController.m in Sources */,
+				0DDAA3C22296A07C0063F88C /* NSUserActivity+CallKit.m in Sources */,
+				0DDAA34A2294DC0C0063F88C /* SimulateIncomingCallViewController.m in Sources */,
+				0DDAA3772294E6DF0063F88C /* CAXException.cpp in Sources */,
+				0DDAA3762294E6DF0063F88C /* CADebugMacros.cpp in Sources */,
+				0DDAA3412294DBBE0063F88C /* ProviderDelegate.m in Sources */,
+				0DDAA3782294E6DF0063F88C /* CAStreamBasicDescription.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDAA395229696700063F88C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDAA39D229696700063F88C /* IntentHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDAA39F229696700063F88C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDAA3AA229696700063F88C /* IntentViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DDAA3B0229696700063F88C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDAA3A2229696700063F88C /* IntentsExtensionUI */;
+			targetProxy = 0DDAA3AF229696700063F88C /* PBXContainerItemProxy */;
+		};
+		0DDAA3B3229696700063F88C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDAA398229696700063F88C /* IntentsExtension */;
+			targetProxy = 0DDAA3B2229696700063F88C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0DDAA32F2294DB9E0063F88C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DDAA3302294DB9E0063F88C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0DDAA3342294DBA00063F88C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DDAA3352294DBA00063F88C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0DDAA3AB229696700063F88C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DDAA3AC229696700063F88C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0DDAA33A2294DBA00063F88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0DDAA33B2294DBA00063F88C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0DDAA33D2294DBA00063F88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XWCallKiter/XWCallKiter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALAK6VG32W;
+				INFOPLIST_FILE = XWCallkiter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qway.qchat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0DDAA33E2294DBA00063F88C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XWCallKiter/XWCallKiter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALAK6VG32W;
+				INFOPLIST_FILE = XWCallkiter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qway.qchat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0DDAA3B6229696700063F88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALAK6VG32W;
+				INFOPLIST_FILE = IntentsExtensionUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qway.qchat.IntentsExtensionUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0DDAA3B7229696700063F88C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALAK6VG32W;
+				INFOPLIST_FILE = IntentsExtensionUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qway.qchat.IntentsExtensionUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0DDAA3B9229696700063F88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALAK6VG32W;
+				INFOPLIST_FILE = IntentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qway.qchat.IntentsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0DDAA3BA229696700063F88C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALAK6VG32W;
+				INFOPLIST_FILE = IntentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qway.qchat.IntentsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DDAA3212294DB9E0063F88C /* Build configuration list for PBXProject "XWCallKiter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDAA33A2294DBA00063F88C /* Debug */,
+				0DDAA33B2294DBA00063F88C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDAA33C2294DBA00063F88C /* Build configuration list for PBXNativeTarget "XWCallKiter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDAA33D2294DBA00063F88C /* Debug */,
+				0DDAA33E2294DBA00063F88C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDAA3B5229696700063F88C /* Build configuration list for PBXNativeTarget "IntentsExtensionUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDAA3B6229696700063F88C /* Debug */,
+				0DDAA3B7229696700063F88C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDAA3B8229696700063F88C /* Build configuration list for PBXNativeTarget "IntentsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDAA3B9229696700063F88C /* Debug */,
+				0DDAA3BA229696700063F88C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0DDAA31E2294DB9E0063F88C /* Project object */;
+}
