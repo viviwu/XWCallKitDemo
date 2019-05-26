@@ -53,36 +53,34 @@
     if(self.stateDidChange) self.stateDidChange();
 }
 
-- (BOOL)hasStartedConnecting{
-    _hasStartedConnecting = self.connectingDate != nil;
-    return _hasStartedConnecting;
-}
-
 - (void)setHasStartedConnecting:(BOOL)hasStartedConnecting
-{
+{   
     _hasStartedConnecting = hasStartedConnecting;
     if (!self.connectDate) {
         self.connectingDate = NSDate.date;
     }
 }
+- (BOOL)hasStartedConnecting{
+  _hasStartedConnecting = self.connectingDate != nil;
+  return _hasStartedConnecting;
+}
 
 - (void)setHasConnected:(BOOL)hasConnected
 {
     _hasConnected = hasConnected;
-    if (hasConnected)   _connectDate = NSDate.date;
+    if (hasConnected)   self.connectDate = NSDate.date;
 }
-
 - (BOOL)getHasConnected
 {
     return _hasConnected = self.connectDate != nil;
 }
 
 - (void)setHasEnded:(BOOL)hasEnded
-{
+{     
     _hasEnded = hasEnded;
-    if (hasEnded) _endDate = NSDate.date;
+    if (hasEnded) self.endDate = NSDate.date;
 }
--(BOOL)hasEnded
+- (BOOL)hasEnded
 {
     return _hasEnded = self.endDate != nil;
 }
@@ -97,7 +95,7 @@
 }
 
 #pragma mark -- Actions
-- (void)startXWCall:(ActionHandler)completion{
+- (void)startCall:(ActionHandler)completion{
     // Simulate the call starting successfully
     completion(YES);
     /*

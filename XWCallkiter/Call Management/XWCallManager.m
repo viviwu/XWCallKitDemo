@@ -42,7 +42,7 @@ NSString * const kCallsChangedNotification = @"CallManagerkCallsChangedNotificat
 - (void)endCall:(XWCall *)call
 {
     CXEndCallAction * endCallAction = [[CXEndCallAction alloc] initWithCallUUID: call.uuid];
-    CXTransaction * transaction = [[CXTransaction alloc] initWithAction: endCallAction];
+    CXTransaction * transaction = [[CXTransaction alloc] initWithAction: endCallAction ];
     [self requestTransaction:transaction];
 }
 
@@ -91,12 +91,9 @@ NSString * const kCallsChangedNotification = @"CallManagerkCallsChangedNotificat
 }
 
 - (void)removeCall:(XWCall *)call
-{
+{ 
     [_calls removeObject:call];
-    __weak typeof(self) weakSelf= self;
-    call.stateDidChange = ^{
-        [weakSelf postkCallsChangedNotification];
-    };
+    [self postkCallsChangedNotification];
 }
 
 - (void)removeAllCalls{

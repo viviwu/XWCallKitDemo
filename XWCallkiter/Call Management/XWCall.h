@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithUUID:(NSUUID*)uuid isOutgoing:(BOOL)isOutgoing;
 
 // MARK: Actions
-- (void)startXWCall:(ActionHandler)completion;
+- (void)startCall:(ActionHandler)completion;
 - (void)answerCall;
 - (void)endCall;
 

@@ -44,10 +44,10 @@
 
 // MARK: Incoming Calls
 /// Use CXProvider to report the incoming call to the system
-- (void)reportIncomingCall:(NSUUID *)uuid
-                    handle:(NSString *)handle
-                  hasVideo:(BOOL)hasVideo
-                completion:(ErrorHandler)completion
+- (void)reportIncomingCall: (NSUUID *)uuid
+                    handle: (NSString *)handle
+                  hasVideo: (BOOL)hasVideo
+                completion: (ErrorHandler)completion
 {
     // Construct a CXCallUpdate describing the incoming call, including the caller.
     CXCallUpdate * update =[CXCallUpdate new];
@@ -112,7 +112,7 @@
     };
     
     // Trigger the call to be started via the underlying network service.
-    [call startXWCall:^(BOOL success) {
+    [call startCall:^(BOOL success) {
         if (success) {
             // Signal to the system that the action has been successfully performed.
             [action fulfill];
@@ -186,6 +186,7 @@
     }
 }
 
+/*
 - (void)provider:(CXProvider *)provider performSetMutedCallAction:(CXSetMutedCallAction *)action
 {
     NSLog(@"%s", __func__);
@@ -214,5 +215,6 @@
 {
     NSLog(@"%s", __func__);
 }
+*/
 
 @end

@@ -82,7 +82,7 @@
     }];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [AppDelegate.shared displayIncomingCall:NSUUID.UUID handle:handle hasVideo:video completion:^(NSError * _Nullable error) {
+        [AppDelegate.shared displayIncomingCall: NSUUID.UUID handle:handle hasVideo:video completion:^(NSError * _Nullable error) {
             [[UIApplication sharedApplication] endBackgroundTask: backgroundTaskIdentifier];
         }];
     }); 
@@ -129,7 +129,7 @@
      */
     NSArray <CallSummaryTableViewCell*>* visibleCells = self.tableView.visibleCells;
     NSArray<NSIndexPath *> *indexPathsForVisibleRows = self.tableView.indexPathsForVisibleRows;
-    for (int index=0; index<visibleCells.count; index++)
+    for (int index=0; index < visibleCells.count; index++)
     {
         CallSummaryTableViewCell * cell = visibleCells[index];
         NSIndexPath * indexPath = indexPathsForVisibleRows[index];
@@ -166,7 +166,7 @@
     cell.handleLabel.text = call.handle;
     UIColor * accessoryLabelsTextColor = call.isOnHold ? UIColor.grayColor : cell.tintColor;
     if (call.hasConnected) {
-        cell.callStatusTextLabel.text = call.isOnHold?NSLocalizedString(@"CALL_STATUS_HELD", @"Call status label for on hold"):NSLocalizedString(@"CALL_STATUS_ACTIVE", @"Call status label for active");
+        cell.callStatusTextLabel.text = call.isOnHold? NSLocalizedString(@"CALL_STATUS_HELD", @"Call status label for on hold"): NSLocalizedString(@"CALL_STATUS_ACTIVE", @"Call status label for active");
     }else if (call.hasStartedConnecting){
         cell.callStatusTextLabel.text = NSLocalizedString(@"CALL_STATUS_CONNECTING", @"Call status label for on hold");
     }else{
