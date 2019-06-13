@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  XWCallKiter
 //
-//  Created by vivi wu on 2019/5/22.
-//  Copyright © 2019 vivi wu. All rights reserved.
+//  Created by vivi wu on 2017/7/22.
+//  Copyright © 2017 vivi wu. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -122,8 +122,15 @@
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler
 {
     NSString * handle = userActivity.startCallHandle;
+    NSLog(@"handle == %@", handle);
     if (handle) {
-        [callManager startCallHandle:handle video:false];
+#if 1
+      [callManager startCallHandle:handle video:false];
+#else
+      [self displayIncomingCall:NSUUID.UUID handle:handle hasVideo:NO completion:^(NSError * _Nullable error) {
+        if (error)  NSLog(@"Error !displayIncomingCall:%@", error);
+      }];
+#endif
         return true;
     }else{
         NSLog(@"Could not determine start call handle from userActivity: %@", userActivity);
