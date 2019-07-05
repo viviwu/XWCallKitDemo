@@ -21,7 +21,7 @@ NSString * const kCallsChangedNotification = @"CallManagerkCallsChangedNotificat
 - (instancetype)init{
     self = [super init];
     if (self) {
-        callController = [[CXCallController alloc]initWithQueue:dispatch_get_main_queue()];
+        callController = [[CXCallController alloc]initWithQueue: dispatch_get_main_queue()];
         _calls = [NSMutableArray array];
     }
     return self;
