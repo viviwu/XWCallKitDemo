@@ -3,7 +3,7 @@
 //  XWPhone
 //
 //  Created by viviwu on 16/9/27.
-//  Copyright © 2016年 viviwu. All rights reserved.
+//  Copyright © 2017年 viviwu. All rights reserved.
 //
 //Abstract:
 //High-level call audio management functions
